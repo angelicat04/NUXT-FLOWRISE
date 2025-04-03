@@ -1,7 +1,7 @@
 <template>
-    <div class="grid gap-12 md:grid-cols-2 items-center" :class="{ 'md:flex-row-reverse': reverse }">
-      <div class="w-300 h-400 bg-red-400">
-        <img :src="image" class="object-cover" /> 
+    <div class="grid gap-12 px-12 md:grid-cols-2 items-center mt-6" :class="{ 'md:flex-row-reverse': reverse }">
+      <div class="">
+        <img :src="image" class="w-[450px] h-[500px]" /> 
         <!-- rounded-xl shadow-lg w-full -->
       </div>
       <div>

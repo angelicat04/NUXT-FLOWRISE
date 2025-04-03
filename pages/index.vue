@@ -26,21 +26,36 @@
       image="images/card2.png"
       title="Mindful task tracking"
       description="Blend productivity with mindfulness. Understand your patterns, enhance focus."
-      :reverse = "true"
+      :reverse = true
     />
-    
+
     <TextWithImage
-      image="images/card2.png"
+      image="images/card3.png"
       title="Productivity and self care"
       description="Beyond task completion. Embrace self-care routines, foster a healthier lifestyle."
     />
 
     <CallToAction/>
-  </template>
+</template>
 
-<script>
+<script setup lang="ts">
 
+  useHead({
+    title: 'Home',
+    meta: [
+      { 
+        name: 'description', 
+        content: 'This is the home page'
+      },
 
-
+      {
+        name: 'keywords',
+        content: 'App, Planing'
+      }
+    ],
+    bodyAttrs: {
+      class: 'test'
+    },
+    script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+  })
 </script>
-
