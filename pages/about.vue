@@ -1,18 +1,12 @@
 <template>
-    <section>
-        <div class="flex">
-            <div>
-                <h1>About the Flowrise team</h1>
-                <p>We’ve been seeking our own inner focus for over 8 years.<br>
-                     We’re a passionate team trying to make the world<br>
-                        a better place.</p>
-            </div>
-
-            <div>
-                <img src="">
-            </div>
-        </div>
-    </section>
+    <TextWithImage
+        image="images/card1.png"
+        title="About the Flowrise team"
+        description="e’ve been seeking our own inner focus for over 8 years.
+                        We’re a passionate team trying to make the world a better place."
+        reverse
+    >
+    </TextWithImage>
 
     <Testimonials/>
 </template>
