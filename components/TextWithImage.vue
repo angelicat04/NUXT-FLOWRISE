@@ -1,23 +1,32 @@
 <template>
-    <div class="grid gap-12 px-12 md:grid-cols-2 items-center mt-6" :class="{ 'md:flex-row-reverse': reverse }">
-      <div class="">
-        <img :src="image" class="w-[450px] h-[500px]" /> 
-        <!-- rounded-xl shadow-lg w-full -->
-      </div>
-      <div>
-        <h3 class="text-xl font-bold">{{ title }}</h3>
-        <p class=" mt-2">{{ description }}</p>
-      </div>
-    </div>
 
-  </template>
+  <section class="flex flex-col items-center md:flex-row justify-between py-6 px-48" :class="{ 'md:flex-row-reverse': reverse }" >
+
+      <div class="flex p-4 md:max-h-[700px]">
+        <img :src="image" class="flex object-cover" /> 
+      </div>
+
+      <div class="flex items-center justify-center md:">
+        <div class="md: w-[250px]">
+          <h3 class="text-xl font-bold">{{ title }}</h3>
+          <p class=" mt-2">{{ description }}</p>
+        </div>
+
+      </div>
+
+
+
+  </section>
   
-  <script setup>
+</template>
+  
+<script setup>
+
   defineProps({
     image: String,
     title: String,
     description: String,
     reverse: Boolean,
   });
-  </script>
+</script>
   

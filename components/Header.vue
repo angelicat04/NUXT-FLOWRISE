@@ -1,11 +1,11 @@
 <template>
-    <div class="h-20 flex justify-between items-center">
+    <div class="h-20 px-12 flex justify-between items-center">
         <div>
             <img src="~/assets/images/logo.png " alt="Logo" class="w-28" />
         </div>
         <nav>
             <ul class="">
-                <li class="flex gap-4 text-slate-900 font-light">
+                <li class="flex gap-4 font-light">
                     <NuxtLink to="/">Home</NuxtLink>
                     <NuxtLink to="/features">Features</NuxtLink>
                     <NuxtLink to="/about">About</NuxtLink>

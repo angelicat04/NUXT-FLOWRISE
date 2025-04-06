@@ -4,7 +4,7 @@
     <div v-if="error"> Erreur: {{ error.message }}</div>
     <div v-else class="flex flex-wrap gap-6 justify-center items-center">
         <h1 class="w-full text-center font-semibold text-3xl">What our users say</h1>
-        <div v-for="testimonial in testimonials" class="w-[300px] h-[350px] shadow-lg rounded-lg p-8 flex flex-col justify-between items-center">
+        <div v-for="testimonial in testimonials" class="w-[300px] h-[350px] border border-white shadow-lg rounded-lg p-8 flex flex-col justify-between items-center">
             <div><p>{{ testimonial.feedback }}</p></div>
             <div class="flex gap-2">
                 <img :src="testimonial.image" />

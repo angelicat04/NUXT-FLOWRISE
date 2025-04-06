@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-wrap gap-3 justify-center items-center mt-14">
+    <section class="flex flex-wrap gap-3 justify-center items-center mt-14 mb-14 ">
         <h1 class="w-full text-center font-semibold text-3xl">Robust features</h1>
         <div v-for="feature in features" :key="feature.id" class="flex flex-col w-[200px] h-[200px] justify-center shadow-xl p-8">
             <div>

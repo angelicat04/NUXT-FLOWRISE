@@ -1,5 +1,5 @@
 <template>
-    <div class="DefaultLayout text-black bg-white px-7 overflow-hidden">
+    <div class="DefaultLayout text-slate-900 bg-white overflow-hidden">
         
         <slot/>
     </div>
