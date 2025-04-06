@@ -33,6 +33,10 @@
     fetchArticles();
   });
 
+  useHead({
+    title: 'Blog'
+  })
+
 </script>
 
 <template>
@@ -40,7 +44,7 @@
     <h1 class="font-bold text-4xl px-8">BLOG</h1>
     
     <!-- <h1>Articles sur {{ query }}</h1> -->
-    <p v-if="loading">Chargement des articles...</p>
+    <p v-if="loading" class="h-screen flex justify-center items-center text-2xl">Chargement des articles...</p>
     <div v-else-if="articles.length">
       <section class="md:grid grid-cols-2 gap-4 px-8 py-4">
         <div v-for="article in articles" :key="article.url" class="w-full flex flex-col justify-center items-start p-6 border mb-12 ">

@@ -77,7 +77,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="loading">Chargement...</div>
+  <div v-if="loading" class="h-screen flex justify-center items-center text-2xl">Chargement...</div>
   <div v-else-if="article" class="w-4/5 flex flex-col m-auto">
     <h1 class="font-bold text-3xl mb-4">{{ article.title }}</h1>
     <img :src="article.urlToImage" alt="Image de l'article" v-if="article.urlToImage" />
