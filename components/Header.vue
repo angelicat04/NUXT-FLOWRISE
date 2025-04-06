@@ -3,10 +3,10 @@
         <div>
             <img src="~/assets/images/logo.png " alt="Logo" class="w-28" />
         </div>
-        <nav>
+        <nav class="md:flex justify-center items-center">
 
             <!-- Menu desktop -->
-            <ul class="hidden">
+            <ul class="hidden md:flex ">
                 <li class="flex gap-4 font-light">
                     <NuxtLink to="/">Home</NuxtLink>
                     <NuxtLink to="/features">Features</NuxtLink>
@@ -15,7 +15,7 @@
                 </li>
             </ul>
 
-            <div class="hidden md:flex gap-2">
+            <div class="hidden md:flex ml-12">
                 <div 
                     class="rounded-full h-10 w-10  hover:bg-slate-900 group justify-center items-center flex cursor-pointer"
                     @click="toggleLayout">
