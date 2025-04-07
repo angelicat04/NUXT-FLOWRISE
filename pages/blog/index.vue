@@ -48,10 +48,9 @@
     <div v-else-if="articles.length">
       <section class="md:grid grid-cols-2 gap-4 px-8 py-4">
         <div v-for="article in articles" :key="article.url" class="w-full flex flex-col justify-center items-start p-6 border mb-12 ">
-          <img :src="article.urlToImage" alt="Image de l'article" v-if="article.urlToImage" class="bg-red-500 w-full"/>
+          <img :src="article.urlToImage" alt="Image de l'article" v-if="article.urlToImage" class="w-full"/>
           <h2 class="font-bold text-2xl w-4/5 mb-4">{{ article.title }}</h2>
           <p class="w-4/5 mb-4">{{ article.description }}</p>
-          <!-- <NuxtLink :to="{ path: `/blog/${encodeURIComponent(article.url)}`, state: { article } }">Lire plus </NuxtLink> -->
           <NuxtLink :to="`/blog/${encodeURIComponent(article.url)}`"><ReadMoreButton/></NuxtLink>
         </div>
 

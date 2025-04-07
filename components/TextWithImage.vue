@@ -28,5 +28,6 @@
     description: String,
     reverse: Boolean,
   });
+
 </script>
   
