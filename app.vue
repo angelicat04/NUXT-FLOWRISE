@@ -2,7 +2,6 @@
   <div>
     <NuxtLayout :name="layout">
       <Header/>
-      
       <NuxtPage/>
       <Footer/>
     </NuxtLayout>

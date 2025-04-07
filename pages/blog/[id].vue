@@ -1,11 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { getData } from '../../composables/useApi';
+import { useApi } from  '../../composables/useApi';
 
 const route = useRoute();
 const article = ref(null);
 const loading = ref(true);
+
+const {getData} = useApi();
 
 const fetchArticle = async () => {
   try {
@@ -15,10 +17,10 @@ const fetchArticle = async () => {
     const response = await getData("everything", { q: "technology", pageSize: 50 });
 
     if (response.articles) {
-      article.value = response.articles.find(a => a.url === articleUrl);
+      article.value = response.articles.find((a) => a.url === articleUrl);
     }
-
     console.log("Article trouvé :", article.value);
+
   } catch (error) {
     console.error("Erreur lors de la récupération de l'article :", error);
   } finally {

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: 'https://newsapi.org/v2', 
-      apiKey: process.env.API_KEY || ''  
+      apiKey: process.env.NUXT_PUBLIC_API_KEY|| ''  
 
     },
   },

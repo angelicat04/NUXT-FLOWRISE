@@ -1,23 +1,23 @@
 <template>
-<section class="flex gap-6 justify-center items-center mt-12">
+    <section class="flex gap-6 justify-center items-center mt-12">
 
-    <div v-if="error"> Erreur: {{ error.message }}</div>
-    <div v-else class="flex flex-wrap gap-6 justify-center items-center">
-        <h1 class="w-full text-center font-semibold text-3xl">What our users say</h1>
-        <div v-for="testimonial in testimonials" class="w-[300px] h-[350px] border border-white shadow-lg rounded-lg p-8 flex flex-col justify-between items-center">
-            <div><p>{{ testimonial.feedback }}</p></div>
-            <div class="flex gap-2">
-                <img :src="testimonial.image" />
-                <div class="flex flex-col">
-                    <p class="font-bold text-[18px]">{{ testimonial.name }}</p>
-                    <p class="font-thin text-[18px]">{{ testimonial.occupation }}</p>
+        <div v-if="error"> Erreur: {{ error.message }}</div>
+            <div v-else class="flex flex-wrap gap-6 justify-center items-center">
+                <h1 class="w-full text-center font-semibold text-3xl">What our users say</h1>
+                <div v-for="testimonial in testimonials" class="w-[300px] h-[350px] border border-white shadow-lg rounded-lg p-8 flex flex-col justify-between items-center">
+                <div><p>{{ testimonial.feedback }}</p></div>
+                <div class="flex gap-2">
+                    <img :src="testimonial.image" />
+                    <div class="flex flex-col">
+                        <p class="font-bold text-[18px]">{{ testimonial.name }}</p>
+                        <p class="font-thin text-[18px]">{{ testimonial.occupation }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-</section>
+    </section>
 </template>
 
 <script setup >

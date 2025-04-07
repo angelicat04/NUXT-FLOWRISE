@@ -1,41 +1,41 @@
 <script setup>
 
   import { ref, onMounted } from 'vue';
-
-  import { getData } from '../../composables/useApi';
+  import { useApi } from '../../composables/useApi'; 
 
 
   const articles = ref([]);
   const loading = ref(true);
   const query = ref("technology"); 
+  const {getData} = useApi(); 
 
   const fetchArticles = async () => {
-    console.log("fetchArticles called"); 
     try {
-      console.log("fetchArticles called with query:", query.value); 
+      console.log("fetchArticles called with query:", query.value);
       const response = await getData("everything", { q: query.value, pageSize: 10 });
 
-      if (response && response.articles) {
-        articles.value = response.articles;
-      } else {
-        articles.value = [];
-      }
-
-      console.log("Response from API:", response); 
+      articles.value = response?.articles || [];
+      console.log("Response from API:", response);
     } catch (error) {
-        console.error("Erreur lors de la récupération des articles :", error);
+      console.error("Erreur lors de la récupération des articles :", error);
     } finally {
-        loading.value = false;
+      loading.value = false;
     }
-  };
+
+
+  }
 
   onMounted(() => {
     fetchArticles();
   });
 
   useHead({
-    title: 'Blog'
-  })
+    title: 'Blog',
+    meta: [
+      { name: 'description', content: 'Blog sur la technologie et l\'innovation' },
+      { name: 'keywords', content: 'blog, technologie, innovation' },
+    ]
+  });
 
 </script>
 
